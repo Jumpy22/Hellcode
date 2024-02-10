@@ -29,6 +29,13 @@ python loader.py
 10. Fetch the payload from the supplied URL
 11. Write the payload to memory and run it
 
+## Improvements
+ - Encode all function names
+ - Add junk code
+ - Anti-vm
+ - Improved persistence/startup methods
+ - Improve delay handling (before anything is executed)
+
 ### Encode
 Simply used to easily convert a string to a list of ORD. Just swap line 1.
 
