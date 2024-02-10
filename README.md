@@ -19,14 +19,15 @@ python loader.py
 ## Execution Path
 1. Checks %TEMP% for file with set beginning and end regex (beginRegex & endRegex be default)
 2. If one is not found the following will happen
-	2a. Find 10 random programs installed on the PC and choose 1
-	2b. Make a file in %TEMP% with the following format "beginRegex(base64 encoded program name)endRegex"
-	2c. Copy the program to %APPDATA% into a folder matching the name of the impersonated program
-	2d. Write to the program path to ```Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce```
-3. Sleep for 20-30 seconds
-4. Decode the payload URL by converting the ORD to CHR
-5. Fetch the payload from the supplied URL
-6. Write the payload to memory and run it
+3. Find 10 random programs installed on the PC and choose 1
+4. Make a file in %TEMP% with the following format "beginRegex(base64 encoded program name)endRegex"
+5. Copy the program to %APPDATA% into a folder matching the name of the impersonated program
+6. Write to the program path to ```Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce```
+7. Once the previous code completes OR a encoded file is found the following will happen
+8. Sleep for 20-30 seconds
+9. Decode the payload URL by converting the ORD to CHR
+10. Fetch the payload from the supplied URL
+11. Write the payload to memory and run it
 
 ### Encode
 Simply used to easily convert a string to a list of ORD. Just swap line 1.
